@@ -3,6 +3,8 @@
 <title></title>
 <script src="script.js"></script>
 <link rel="stylesheet" href="first.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
 </head>
 
 <body>
@@ -14,19 +16,98 @@
 <a  href="contact.html" class="btn" name="Dan">Контактные данные</a>
 <a  href="menu.html" class="btn" name="Men">Меню</a>
 <a  class="active" name="Bron">Бронь</a>
+<a  href = "#" class="btn" >Доставка самовывозом</a>
 <a  href="regis2.html" class="vhod" name="ak">Вход/Регистрация</a>
 </header>
-<p>Обратная связь
-  Возникли вопросы или идеи? напишите нам!</p>
+<h2>БРОНИРОВАНИЕ ДОСТУПНО ТОЛЬКО ВОЙДЯ В АККАУНТ/ЗАРЕГИСТРИРОВАВШИСЬ</h2>
+<!-- Блок бронирования -->
+<div class="booking-section">
+    <h2>Забронировать столик/день в кафе</h2>
+    <p style="padding-top: 0;">Выберите удобную дату.</p>
+    
+    <form class="booking-form">
+        <label for="booking-date">Выберите дату:</label>
+        <!-- Вот тут появится календарь -->
+        <input type="text" id="booking-date" placeholder="Нажмите, чтобы выбрать дату..." required>
+        
+        <button type="submit" class="booking-btn">Забронировать</button>
+        <label for="booking-date">С вами свяжутся в течение одного дня</label>
+         <input type="text" id="booking-date" placeholder="Введите номер телефона для связи с вами" required>
+    </form>
+</div>
+
+<!-- Стили для этой формы (чтобы было красиво) -->
+<style>
+    .booking-section {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .booking-section h2 { margin-top: 0; color: #333; }
+    .booking-section p { color: #666; font-size: 14px; margin-bottom: 20px; }
+    .booking-form label { display: block; text-align: left; margin-bottom: 8px; font-weight: bold; color: #333;}
+    .booking-form input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0d5c8;
+        border-radius: 8px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .booking-form input:focus { outline: none; border-color: #6b3f1d; }
+    .booking-btn {
+       align-items: center;
+        width: 100%;
+        padding: 14px;
+        background:transparent;
+        color: rgb(7, 6, 6);
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin: 0 ;
+    }
+    .booking-btn:hover { background: #8a5228; }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="font-size: 20;">
+  Возникли вопросы или идеи? Напишите нам!</p>
   
-  <table class="table">
+  <table class="table"style="margin-top: 5px;">
     <tr>
       <th>Ваше ФИО</th>
-      <th> <input type="vio" placeholder="ФИО" class="form-input"> </th>
+      <th> <input type="vio" placeholder="ФИО" class="form-input" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; max-width: 300px;" > </th>
     </tr>
     <tr>
       <th>Email</th>
-      <th><input class="k" type="email" placeholder="Эл. почта" class="form-input"></th>
+      <th><input class="k" type="email" placeholder="Эл. почта" class="form-input" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; max-width: 300px;"></th>
     </tr>
     <tr>
       <th>Ваше сообщение</th>

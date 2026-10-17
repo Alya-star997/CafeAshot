@@ -1,6 +1,10 @@
 p{
+   font-family: 'URW Chancery L, cursive';
    padding-top: 20px; 
    margin: 0;
+}
+a{
+   font-family: 'URW Chancery L, cursive';
 }
 
 .ikon{
@@ -11,11 +15,21 @@ width: 200px; /* Твой размер */
 }
 
 header{
+  font-family: 'URW Chancery L, cursive';
     background-color: rgb(236, 144, 69);
    height: 200px; 
   padding: -30px 20px 30px;
+  width: 100%;
+    margin-right: 0;       /* Убирает отступы справа */
+    margin-top: 0 ;   
 }
 body{
+ font-family: 'URW Chancery L, cursive';
+ 
+  margin: 0;
+  overflow-x: hidden;/*убирает горизонтальную прокрутку*/
+    padding: 0;
+    width: 100%;
      position: relative;
     background-color: #eccca3;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -23,13 +37,20 @@ body{
 }
 
 h1{
-  
+   font-family: 'URW Chancery L, cursive';
    font-size: 50px;
   margin: -70px;           /* было большое значение */
   padding-top: 0;      /* было 2% — убираем */
   text-align: center;
 }
+h2{
+   font-family: 'URW Chancery L, cursive';
+}
+h3{
+   font-family: 'URW Chancery L, cursive';
+}
 .btn{
+   font-family: 'URW Chancery L, cursive';
   text-decoration: none;
   display: flex;
     padding-left: 20px;
@@ -49,6 +70,7 @@ h1{
   box-shadow:none;
 }
 .vhod{
+   font-family: 'URW Chancery L, cursive';
     border: none;
      overflow: hidden;  
     padding: 12px 24px;
@@ -119,6 +141,7 @@ h1{
   transition: opacity 0.3s;
 }
 .k-form {
+   font-family: 'URW Chancery L, cursive';
   text-align: center;
   display: block;
   width: 100%;
@@ -148,6 +171,7 @@ h1{
   border-color: #000;
 }
 .table{
+   font-family: 'URW Chancery L, cursive';
  max-width: 500px;
     margin: 0 auto;
     text-align: left;
@@ -196,6 +220,7 @@ table button[type="submit"]:hover {
     background: #8a5228;
 }
 .uhod{
+   font-family: 'URW Chancery L, cursive';
    border: none;
      overflow: hidden;  
     padding: 5px 12px;
@@ -239,6 +264,7 @@ table button[type="submit"]:hover {
 }
 
 .active{
+   font-family: 'URW Chancery L, cursive';
    padding-left: 20px;
    text-decoration: underline;
   border: none;
@@ -288,6 +314,7 @@ table button[type="submit"]:hover {
 }
 
 .cards {
+   font-family: 'URW Chancery L, cursive';
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -315,9 +342,10 @@ table button[type="submit"]:hover {
   margin-bottom: 10px;
 }
 .card {
+   font-family: 'URW Chancery L, cursive';
    display: flex;   
  overflow: hidden;
-  width: 200px;
+  width: 250px;
   margin-top: 20px;
   background: #cef1e4;
   border-radius: 10px;
@@ -341,6 +369,7 @@ table button[type="submit"]:hover {
   gap: 10px; /* Расстояние между элементами */
 }
 button{
+   font-family: 'URW Chancery L, cursive';
      padding-left: 20px;
     border: none;
      overflow: hidden;  
@@ -355,6 +384,7 @@ button{
     display: inline-block;
   margin: 25 20px;  
   bottom: 10px;
+  margin-top: auto;
   box-shadow:none;
 }
 button::before{
@@ -390,6 +420,7 @@ button .active{
 }
 
 .dish-of-the-day {
+   font-family: 'URW Chancery L, cursive';
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,14 +439,16 @@ button .active{
 .dotd-card {
   position: relative;        /* для бейджа со скидкой */
   transform: scale(1.1);     /* чуть больше обычных карточек */
+  width: 20%;
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .badge {
+   font-family: 'URW Chancery L, cursive';
   position: absolute;
-  top: -10px;
+  top: 0;
   right: -10px;
-  background: #d32f2f;
+  background: #f00f0f;
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -437,4 +470,7 @@ button .active{
   padding: 5px 15px;
   border-radius: 8px;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+.card-shah{
+  flex-direction: column;  align-items: center;   margin: 25 0px; width: 100%;  position: static;
 }

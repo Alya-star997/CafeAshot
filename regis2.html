@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head><src="script.js">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход в аккаунт </title>
+    <title>Вход в аккаунт</title>
     <style>
         /* --- СБРОС И БАЗОВЫЕ СТИЛИ --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+             font-family: 'URW Chancery L, cursive';
             background: #f4efe9;
             min-height: 100vh;
             display: flex;
@@ -24,7 +24,7 @@
             border: none;
             border-radius: 10px;
             background: transparent;
-            color: #fff;
+    color: #3b2a1a; 
             font-size: 16px;
             cursor: pointer;
             transition: background 0.3s;
@@ -34,15 +34,14 @@
 
         /* --- ЗАТЕМНЕНИЕ ФОНА --- */
         .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.55);
-            backdrop-filter: blur(3px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            z-index: 100;
+         position: fixed; /* Отрывает от документа и кладет поверх всего */
+    top: 0; left: 0; right: 0; bottom: 0; /* Растягивает на весь экран */
+    background: rgba(0, 0, 0, 0.55); /* Полупрозрачный темный фон */
+    backdrop-filter: blur(3px); /* Размытие фона (по желанию) */
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center; /* Центрирует окно */
+    align-items: center; /* Центрирует окно */
+    z-index: 9999; 
         }
         .modal-overlay.active { display: flex; }
 
