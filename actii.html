@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Акции кафе</title>
+<script src="script.js"></script>
+<link rel="stylesheet" href="first.css">
+</head>
+
+<body>
+<header>
+     <img src="ava.jpg" class="ikon" width="250">
+<h1><b>Кафе "У Ашота"</b></h1>
+<a  href="index.html" class="btn" name="glav">Главная</a>
+<a  class="active" name="Act">Акции кафе</a>
+<a  href="contact.html" class="btn" name="Dan">Контактные данные</a>
+<a  href="menu.html" class="btn" name="Men">Меню</a>
+<a href="bron.html" class="btn" name="Bron" >Бронь</a>
+<a href="regis2.html" class="vhod" name="ak">Вход/Регистрация</a>
+</header>
+
+<section class="dish-of-the-day">
+  <h2 class="dotd-title">🔥 Блюдо дня со скидкой 24 часа!</h2>
+  
+  <div class="card dotd-card">
+    <span class="badge">-10%</span>
+    <img src="piti.jpg" alt="Блюдо дня" class="dish-photo" id="dotd-img">
+    <h3 id="dotd-name">Пити</h3>
+    <p class="sostav" id="dotd-sostav">Состав: мясо курицы/свинины</p>
+    
+    <div class="price">
+      <span class="old-price" id="dotd-old-price">500 ₽</span>
+      <span class="new-price" id="dotd-new-price">450 ₽</span>
+    </div>
+    
+    <button id="dotd-btn">Заказать</button>
+  </div>
+
+  <div class="timer">
+    До конца акции: <span id="countdown">24:00:00</span>
+  </div>
+</section>
+
+
+
+
+
+<h2 style="font-size: 30px; text-align: center;font-weight: normal;">Акции в день рождения/свадьбы/поминки и другие праздники</h2>
+<h2 style="font-size: 20px; text-align: center; font-weight: normal; margin-bottom: -10px">Акции действуют только при предоставлении паспорта/свидетельства о рождении(детям до 14 лет) или иного документа о таковом значимом событии</h2>
+<div class="cards">
+<div class="card shah">
+ <img src="plov.jpg" alt="Плов" class="dish-photo" >
+    <h3>Плов</h3>
+    <p style="font-size: 12px;"><i>Состав: мясо курицы/баранина; морковь; рис</i></p>
+    <div class="price">
+    <span class="old-price">500 ₽</span>
+      <span class="new-price">380 ₽</span>
+    <button>Заказать</button>
+  </div>
+  </div>
+<div class="card shah">
+ <img src="saj.jpg" alt="Садж" class="dish-photo" >
+    <h3>Садж</h3>
+    <p style="font-size: 12px;"><i>Состав: мясо баранина/говядина; картофель; баклажаны; болгарский перец; помидоры; лук репчатый; морковь; кабачок; шампиньоны</i></p>
+    <div class="price">
+    <span class="old-price">610 ₽</span>
+      <span class="new-price">530 ₽</span>
+    <button>Заказать</button></div>
+  </div>
+  <div class="card shah">
+ <img src="chet.jpg" alt="Чыхыртма" class="dish-photo" >
+    <h3>Чыхыртма</h3>
+    <p style="font-size: 12px;"><i>Состав: мясо курицы;репчатый лук; яйца; помидоры; куркума; </i></p>
+    <div class="price">
+    <span class="old-price">490 ₽</span>
+      <span class="new-price">210 ₽</span></div>
+    <button>Заказать</button>
+  </div>
+  <div class="card shah">
+ <img src="bozbzsh.jpg" alt="Бозбаш" class="dish-photo" >
+    <h3>Бозбаш</h3>
+    <p style="font-size: 12px;"><i>Состав: мясо курицы/баранина; нут (турецкий горох); картофель; репчатый лук; помидоры; черный перец </i></p>
+    <div class="price">
+    <span class="old-price">350 ₽</span>
+      <span class="new-price">200 ₽</span></div>
+    <button>Заказать</button>
+  </div>
+   <div class="card shah">
+ <img src="chahoh.jpg" alt="Чахохбили" class="dish-photo" >
+    <h3>Чахохбили</h3>
+    <p style="font-size: 12px;"><i>Состав: мясо курицы/индейка; репчатый лук; помидоры; чеснок; острый перец</i></p>
+    <div class="price">
+    <span class="old-price">500 ₽</span>
+      <span class="new-price">350 ₽</span></div>
+    <button>Заказать</button>
+  </div>
+  </div>
+  <p style="font-size: 30px; text-align: center;font-weight: normal;">Основное меню можно посмотреть перейдя в радел <i>"Меню"</i></p>
+  <a href="menu.html"><i>Ссылка на меню </i></a>
+
+
+
+
+
+
+
+<p>Обратная связь
+  Возникли вопросы или идеи? напишите нам!
+  
+  <table class="table">
+    <tr>
+      <th>Ваше ФИО</th>
+      <th> <input type="vio" placeholder="ФИО" class="form-input"> </th>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th><input class="k" type="email" placeholder="Эл. почта" class="form-input"></th>
+    </tr>
+    <tr>
+      <th>Ваше сообщение</th>
+      <th><textarea placeholder="Напишите ваше сообщение..." rows="5"></textarea></th>
+    </tr>
+  </table>
+<button  class="uhod">Отправить</button></p>
+
+
+
+
+
+ <script src="script.js"></script>
+</body>
+
+<footer>
+
+</footer>
+
+</html>

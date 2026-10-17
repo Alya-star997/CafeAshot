@@ -1,0 +1,440 @@
+p{
+   padding-top: 20px; 
+   margin: 0;
+}
+
+.ikon{
+width: 200px; /* Твой размер */
+    height: auto;
+    margin-left: auto;
+    margin-left: -80em; 
+}
+
+header{
+    background-color: rgb(236, 144, 69);
+   height: 200px; 
+  padding: -30px 20px 30px;
+}
+body{
+     position: relative;
+    background-color: #eccca3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-align: center;
+}
+
+h1{
+  
+   font-size: 50px;
+  margin: -70px;           /* было большое значение */
+  padding-top: 0;      /* было 2% — убираем */
+  text-align: center;
+}
+.btn{
+  text-decoration: none;
+  display: flex;
+    padding-left: 20px;
+    border: none;
+     overflow: hidden;  
+    padding: 8px 18px;
+    color: rgb(11, 4, 4);
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 25px;
+   transition: background-color 0.3s;
+    border-radius: 10px;
+    display: inline-block;
+  margin: 20 20px;  
+  bottom: -60px;
+  box-shadow:none;
+}
+.vhod{
+    border: none;
+     overflow: hidden;  
+    padding: 12px 24px;
+    color: rgb(11, 4, 4);
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+   
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    display: inline-block;
+  margin: 0;  
+  top: 20px;
+  right: 20px;
+  box-shadow:none;
+}
+.vhod:before{
+ 
+       content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    background: linear-gradient(to right #D2691E,#A0522D,#F4A460);
+    z-index: -1;
+    transition: 0,.5s;  
+}
+.vhod:hover::before{
+   height: 100%; 
+}
+.vhod:hover{
+     background-color: #ECCCA3;
+}
+
+.btn::before{
+    opacity: 0;                                /* фон исчезает при наведении */
+  transition: opacity 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    
+    z-index: -1;
+    transition: 0,.5s;
+}
+.btn:hover::before {
+  height: 100%;
+                     
+}
+
+.btn:hover{
+   transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+   
+}
+.btn .active{
+  opacity: 0;                    /* полностью исчезает */
+  transition: opacity 0.3s;
+}
+.k-form {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #881e1e;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.k::before,
+.k::after {
+  
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+   border-radius: 30px;        /* закругление углов */
+  font-size: 20px;
+}
+.k-input:focus {
+  border-color: #000;
+}
+.table{
+ max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+table label{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #3b2a1a;
+}
+table textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    border: 1.5px solid #e0d5c8;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fdfbf8;
+    box-sizing: border-box;
+}
+table textarea:focus {
+    outline: none;
+    border-color: #6b3f1d;
+    box-shadow: 0 0 0 3px rgba(107, 63, 29, 0.12);
+}
+table button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #6b3f1d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+table button[type="submit"]:hover {
+    background: #8a5228;
+}
+.uhod{
+   border: none;
+     overflow: hidden;  
+    padding: 5px 12px;
+    color: rgb(11, 4, 4);
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+   transition: color 0.3s, background 0.3s;
+    width: auto;
+    border-radius: 10px;
+    display: inline-block;
+  margin:  5px;  
+  bottom: 30px;
+  box-shadow:none;
+}
+
+.uhod::before{
+    content: "";
+    align-self: center;
+    padding: 4px 10px;
+    position: absolute;
+    margin: 20px;
+    bottom: auto;
+    left: 0;
+    width: auto;
+    height: 0;
+    border-radius: 10.5px;
+    background: linear-gradient(to right #D2691E,#A0522D,#F4A460);
+    z-index: -1;
+    font-size: 14px;
+    display: block;
+}
+.uhod:hover::before {
+  height: 100%;                  
+}
+
+.uhod:hover{
+   background-color: #ffcb30;
+   
+}
+
+.active{
+   padding-left: 20px;
+   text-decoration: underline;
+  border: none;
+  overflow: hidden;
+  padding: 12px 24px;
+  color: rgb(11, 4, 4);
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 30px;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  display: inline-block;
+  margin: -20px 20px;
+  bottom: -25px;
+  text-shadow: 2px 2px 4px #167eb6;
+  box-shadow: none;
+  font-weight: bold; 
+}
+
+.active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    background: linear-gradient(to right #D2691E,#A0522D,#F4A460);
+    z-index: -1;
+    transition: 0,.5s;
+}
+.active:hover::before {
+  height: 100%;                  
+}
+.old-price {
+  color: #999;                    /* серый */
+  text-decoration: line-through;  /* зачёркнуто */
+  font-size: 14px;
+}
+.new-price {
+  color: #000;                    /* чёрный */
+  font-weight: bold;              /* жирный */
+  font-size: 18px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+    justify-content: center;
+    
+}
+
+.card .price {
+  padding-bottom: 30px;
+  margin-top: auto;    /* цена уезжает вниз */
+}
+
+.card button {
+  margin-top: 8px;     /* небольшой отступ между ценой и кнопкой */
+  
+}
+
+.card img {
+  background-position: center;
+   background-size: cover; 
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card {
+   display: flex;   
+ overflow: hidden;
+  width: 200px;
+  margin-top: 20px;
+  background: #cef1e4;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-direction: column; 
+}
+.dish-photo {
+  width: 100%; /* Картинка на всю ширину */
+  height: 180px; /* Фиксированная высота, подберите под дизайн */
+  object-fit: cover; /* КЛЮЧЕВОЕ: картинка не будет растянутой или размытой, браузер аккуратно её обрежет */
+  display: block;
+}
+
+/* Контент внутри карточки (текст, кнопка) */
+.card-content {
+  padding: 15px; /* Возвращаем отступы для текста */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Расстояние между элементами */
+}
+button{
+     padding-left: 20px;
+    border: none;
+     overflow: hidden;  
+    padding: 8px 18px;
+    color: rgb(11, 4, 4);
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+   transition: background-color 0.3s;
+    border-radius: 10px;
+    display: inline-block;
+  margin: 25 20px;  
+  bottom: 10px;
+  box-shadow:none;
+}
+button::before{
+    opacity: 0;                                /* фон исчезает при наведении */
+  transition: opacity 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    
+    z-index: -1;
+    transition: 0,.5s;
+}
+button:hover::before {
+  height: 100%;
+                     
+}
+
+button:hover{
+  background-color: #5c53d9;
+   transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+   
+}
+button .active{
+  opacity: 0;                    /* полностью исчезает */
+  transition: opacity 0.3s;
+}
+
+.dish-of-the-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.4); /* чуть светлее фона */
+  margin-bottom: 40px;
+}
+
+.dotd-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #8b5a2b;
+  text-align: center;
+}
+
+.dotd-card {
+  position: relative;        /* для бейджа со скидкой */
+  transform: scale(1.1);     /* чуть больше обычных карточек */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #d32f2f;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.timer {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+#countdown {
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}

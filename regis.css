@@ -1,0 +1,84 @@
+.body{
+    position: relative;
+    background-color: #eccca3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-align: center;
+}
+
+.open-btn{
+    text-decoration: none;
+    overflow: hidden;  
+    color: rgb(11, 4, 4);
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    display: inline-block;
+  margin: 20 20px;  
+  bottom: 25;
+  box-shadow:none;
+}
+.open-btn::before{
+     opacity: 0;                                /* фон исчезает при наведении */
+  transition: opacity 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    z-index: -1;
+    transition: 0,.5s;
+}
+.open-btn:hover::before {
+  height: 100%;
+                     
+}
+
+.open-btn:hover{
+   transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+   
+}
+.submit-btn{
+text-decoration: none;
+    overflow: hidden;  
+    color: rgb(11, 4, 4);
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    display: inline-block;
+  margin: 20 20px;  
+  bottom: 25;
+  box-shadow:none;
+}
+
+.submit-btn::before{
+     opacity: 0;                                /* фон исчезает при наведении */
+  transition: opacity 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    transform: scale3d(1.02,1.06,1.06);
+    border-radius: 10.5px;
+    z-index: -1;
+    transition: 0,.5s;
+}
+.submit-btn:hover::before {
+  height: 100%;
+                     
+}
+
+.submit-btn:hover{
+   transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+   
+}

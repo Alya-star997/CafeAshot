@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Вход</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="regis.css">
+</head>
+<body>
+
+    <!-- Кнопки для открытия окна -->
+    <button class="open-btn" data-modal="login">Войти</button>
+    <button class="open-btn" data-modal="register">Регистрация</button>
+
+    <!-- Затемнённый фон + окно -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+
+            <!-- Табы -->
+            
+
+            <!-- Форма входа -->
+            <form class="modal-form active" id="login">
+                <h2>С возвращением!</h2>
+
+                <label>
+                    Email
+                    <input type="email" placeholder="you@example.com" required>
+                </label>
+
+                <label>
+                    Пароль
+                    <input type="password" placeholder="••••••••" required>
+                </label>
+
+                <button type="submit" class="submit-btn">Войти</button>
+                <p class="form-footer">
+                    Нет аккаунта?
+                    <a href="#" data-switch="register">Зарегистрироваться</a>
+                </p>
+            </form>
+<script src="script.js"></script>
+            
+</body>
+</html>

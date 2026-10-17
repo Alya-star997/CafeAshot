@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><src="script.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в аккаунт </title>
+    <style>
+        /* --- СБРОС И БАЗОВЫЕ СТИЛИ --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+            background: #f4efe9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* --- КНОПКИ ОТКРЫТИЯ --- */
+        .open-btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 10px;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-family: inherit;
+        }
+        .open-btn:hover { background: #8a5228; }
+
+        /* --- ЗАТЕМНЕНИЕ ФОНА --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(3px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 100;
+        }
+        .modal-overlay.active { display: flex; }
+
+        /* --- САМО ОКНО --- */
+        .modal {
+            position: relative;
+            background: #fff;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.25s ease-out;
+            text-align: left; /* Возвращаем выравнивание текста влево внутри окна */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* --- КНОПКА ЗАКРЫТИЯ --- */
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            border: none;
+            background: transparent;
+            font-size: 26px;
+            line-height: 1;
+            color: #999;
+            cursor: pointer;
+        }
+        .modal-close:hover { color: #333; }
+
+        /* --- ТАБЫ (ВХОД / РЕГИСТРАЦИЯ) --- */
+        .modal-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            background: #f1eae1;
+            padding: 4px;
+            border-radius: 10px;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #7a6a5a;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .tab.active {
+            background: #fff;
+            color: #3b2a1a;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+
+        /* --- ФОРМЫ --- */
+        .modal-form { display: none; flex-direction: column; gap: 16px; }
+        .modal-form.active { display: flex; }
+
+        .modal-form h2 {
+            font-size: 22px;
+            color: #3b2a1a;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .modal-form label {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 14px;
+            color: #6b5a4a;
+        }
+
+        .modal-form input {
+            padding: 12px 14px;
+            border: 1.5px solid #e0d5c8;
+            border-radius: 10px;
+            font-size: 15px;
+            background: #fdfbf8;
+            transition: border 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+        .modal-form input:focus {
+            outline: none;
+            border-color: #6b3f1d;
+            box-shadow: 0 0 0 3px rgba(107, 63, 29, 0.12);
+        }
+
+        .submit-btn {
+            margin-top: 4px;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            background: #6b3f1d;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+        .submit-btn:hover { background: #8a5228; }
+
+        .form-footer {
+            text-align: center;
+            font-size: 14px;
+            color: #7a6a5a;
+            margin-top: 4px;
+        }
+        .form-footer a {
+            color: #6b3f1d;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .form-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- Кнопки для открытия окна -->
+    <button class="open-btn" data-modal="login">Войти</button>
+    <button class="open-btn" data-modal="register">Регистрация</button>
+
+    <!-- Затемнённый фон + окно -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+
+            <!-- Табы -->
+            <div class="modal-tabs">
+                <button class="tab active" data-tab="login">Вход</button>
+                <button class="tab" data-tab="register">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <form class="modal-form active" id="login">
+                <h2>С возвращением!</h2>
+                <label>
+                    Email
+                    <input type="email" placeholder="you@example.com" required>
+                </label>
+                <label>
+                    Пароль
+                    <input type="password" placeholder="••••••••" required>
+                </label>
+                <button type="submit" class="submit-btn">Войти</button>
+                <p class="form-footer">
+                    Нет аккаунта?
+                    <a href="#" data-switch="register">Зарегистрироваться</a>
+                </p>
+            </form>
+
+            <!-- Форма регистрации -->
+            <form class="modal-form" id="register">
+                <h2>Создать аккаунт</h2>
+                <label>
+                    Имя
+                    <input type="text" placeholder="Иван" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" placeholder="you@example.com" required>
+                </label>
+                <label>
+                    Пароль
+                    <input type="password" placeholder="Минимум 6 символов" minlength="6" required>
+                </label>
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                <p class="form-footer">
+                    Уже есть аккаунт?
+                    <a href="#" data-switch="login">Войти</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const openBtns = document.querySelectorAll('.open-btn');
+        const closeBtn = document.getElementById('closeModal');
+        const tabs = document.querySelectorAll('.tab');
+        const forms = document.querySelectorAll('.modal-form');
+
+        // Открытие окна
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('active');
+                switchTab(btn.dataset.modal);
+            });
+        });
+
+        // Закрытие по крестику
+        closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+
+        // Закрытие по клику на фон
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+
+        // Закрытие по Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') modal.classList.remove('active');
+        });
+
+        // Переключение табов
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+        });
+
+        // Ссылки "Зарегистрироваться / Войти" внутри формы
+        document.querySelectorAll('[data-switch]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab(link.dataset.switch);
+            });
+        });
+
+        function switchTab(name) {
+            tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+            forms.forEach(f => f.classList.toggle('active', f.id === name));
+        }
+    </script>
+</body>
+</html>
