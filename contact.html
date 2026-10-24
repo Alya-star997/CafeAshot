@@ -14,7 +14,13 @@
 <a class="btn active" href="contact.html">Контактные данные</a>
 <a  href="menu.html" class="btn" name="Men">Меню</a>
 <a href="bron.html" class="btn" name="Bron" >Бронь</a>
-<a  href = "#" class="btn" >Доставка самовывозом</a>
+<a  href = "#" class="btn" id="btn-alert" >Доставка самовывозом</a>
+<script>
+  const btn = document.getElementById('btn-alert');
+  btn.addEventListener('click', () => {
+    alert('Войдите в аккаунт!!');
+  });
+</script>
 <a  href="regis2.html" class="vhod" name="ak">Вход/Регистрация</a>
 </header>
 

@@ -16,7 +16,13 @@
 <a  href="contact.html" class="btn" name="Dan">Контактные данные</a>
 <a  href="menu.html" class="btn" name="Men">Меню</a>
 <a  class="active" name="Bron">Бронь</a>
-<a  href = "#" class="btn" >Доставка самовывозом</a>
+<a  href = "#" class="btn" id="btn-alert">Доставка самовывозом</a>
+<script>
+  const btn = document.getElementById('btn-alert');
+  btn.addEventListener('click', () => {
+    alert('Войдите в аккаунт!!');
+  });
+</script>
 <a  href="regis2.html" class="vhod" name="ak">Вход/Регистрация</a>
 </header>
 <h2>БРОНИРОВАНИЕ ДОСТУПНО ТОЛЬКО ВОЙДЯ В АККАУНТ/ЗАРЕГИСТРИРОВАВШИСЬ</h2>
@@ -28,10 +34,11 @@
     <form class="booking-form">
         <label for="booking-date">Выберите дату:</label>
         <!-- Вот тут появится календарь -->
-        <input type="date" id="booking-date" placeholder="Нажмите, чтобы выбрать дату..." required>
+        <input type="date"min="today" id="booking-date" placeholder="Нажмите, чтобы выбрать дату..." required>
         <label for="booking-date">С вами свяжутся в течение одного дня</label>
          <input type="text" id="booking-date" placeholder="Введите номер телефона для связи с вами" required>
         <button type="submit" class="booking-btn">Забронировать</button>
+        
     </form>
 </div>
 

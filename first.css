@@ -573,3 +573,12 @@ button .active{
   border-radius: 8px;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
+.avaakk{
+  width: 180px; /* Твой размер */
+  padding: 10px 10px 0 0;
+    height: auto;
+    margin-left: auto;
+    margin-left: -80em; 
+    position: relative;
+    border-radius: 3000px;
+}
