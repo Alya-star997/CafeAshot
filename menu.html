@@ -14,55 +14,61 @@
 <a  href="contact.html" class="btn" name="Dan">Контактные данные</a>
 <a  class="active" name="Men">Меню</a>
 <a href="bron.html" class="btn" name="Bron" >Бронь</a>
-<a  href = "#" class="btn" >Доставка самовывозом</a>
+<a  href = "#" class="btn" id="btn-alert" >Доставка самовывозом</a>
+<script>
+  const btn = document.getElementById('btn-alert');
+  btn.addEventListener('click', () => {
+    alert('Войдите в аккаунт!!');
+  });
+</script>
 <a href="regis2.html" class="vhod" name="ak">Вход/Регистрация</a>
 </header>
 <h2 style="font-size: 40px; text-align: left; margin-left: 40px; margin-bottom: -20px">Основное меню кафе:</h2>
 <h3 style="font-size: 35px; text-align: left; margin-left: 40px; margin-bottom: -10px">Блюда:</h3>
 <div class="cards">
-<div class="card shah">
+<div class="card ">
  <img src="shah.jpg" alt="Шашлык" class="dish-photo">
     <h3>Шашлык</h3>
     <p style="font-size: 16px;"><i>Состав: мясо курицы/свинины.</i></p>
     <p class="price">Цена за шт: 119 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card lulka">
+<div class="card ">
   <img src="lulka.jpg" alt="люлякибаб" class="dish-photo">
     <h3>Люля-кебаб</h3>
      <p style="font-size: 16px;"><i>Состав: мясо курицы/свинины;репчатый лук.</i></p>
     <p class="price">Цена за шт: 199 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card dolma">
+<div class="card ">
   <img src="dolma.jpg" alt="долма" class="dish-photo">
     <h3>Долма</h3>
      <p style="font-size: 16px;"><i>Состав: мясной фарш(куриный/свиной);виноградные листья;рис;репчатый лук;соль;перец.</i></p>
     <p class="price">Цена за шт: 49 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card hinkali">
+<div class="card ">
   <img src="hinkali.jpg" alt="Хинкали" class="dish-photo">
   <h3>Хинкали</h3> 
    <p style="font-size: 16px;"><i>Состав: тесто; мясо(баранины/говядины/свинины).</i></p>
     <p class="price">Цена за шт: 75₽</p>
     <button>Заказать</button>
   </div>
-<div class="card hach">
+<div class="card ">
   <img src="hach.jpg" alt="Ха" class="dish-photo">
     <h3>Хачапури</h3>
     <p style="font-size: 16px;"><i>Состав: тесто; сулугуни; имеретинский сыр; брынзу; адыгейский сыр; моцарелла; яйцо; сливочное масло; сметана/йогурт.</i></p>
     <p class="price">Цена за шт: 149 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card adjap">
+<div class="card ">
   <img src="ajap.jpg" alt="Аджапсандали" class="dish-photo">
     <h3>Аджапсандали</h3>
     <p style="font-size: 16px;"><i>Состав: мясо(говядины/баранины/курицы); баклажаны; помидоры; сладкий перец; репчатый лук; чеснок; картофель; морковь.</i></p>
     <p class="price">Цена за порцию: 329 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card lobi">
+<div class="card ">
   <img src="lobio.jpg" alt="Лобио" class="dish-photo">
     <h3>Лобио</h3>
      <p style="font-size: 16px;"><i>Состав: мясо(говядины/баранины/курицы); фасоль; репчатый лук; грецкие орехи; чеснок; винный уксус/лимонный сок; грибы.</i></p>
@@ -70,35 +76,35 @@
     <p class="price">Цена за порцию(детский): 319 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card saci">
+<div class="card ">
   <img src="sacivi.jpg" alt="Сациви" class="dish-photo">
     <h3>Сациви</h3>
     <p style="font-size: 16px;"><i>Состав: птица(курица/индейка/утка); грецкие орехи; лук; аджика.</i></p>
     <p class="price">Цена за порцию: 449 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card pirog">
+<div class="card ">
   <img src="pirog.jpg" alt="пирог" class="dish-photo">
     <h3>Осетинский пирог</h3>
     <p style="font-size: 16px;"><i>Состав: тесто; осетинский рассольный сыр; рубленое мясо (говядины/баранины).</i></p>
     <p class="price">Цена за один кусок: 179 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card galansh">
+<div class="card ">
   <img src="jiji.png" alt="Жижиг-галнаш" class="dish-photo">
     <h3>Жижиг-галнаш</h3>
     <p style="font-size: 16px;"><i>Состав: рубленое мясо(говядины/баранины); чеснок; репчатый лук; соус; морковь.</i></p>
     <p class="price">Цена за порцию: 499 ₽</p>
     <button>Заказать</button>
   </div>
-  <div class="card pirog">
+  <div class="card ">
   <img src="dovga.jpg" alt="довга" class="dish-photo">
     <h3>Довга</h3>
     <p style="font-size: 16px;"><i>Состав:  катык/мацони/простокваша/кефир; вода; яйцо; мука; рис; нут; .</i></p>
     <p class="price">Цена за один кусок: 279 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card galansh">
+<div class="card ">
   <img src="pahlava.jpg" alt="Пахлава" class="dish-photo">
     <h3>Пахлава</h3>
     <p style="font-size: 16px;"><i>Состав: тесто; орехи(грецкие/миндаль/фисташки); сироп(сахар и мед).</i></p>
@@ -109,7 +115,7 @@
 <h3 style="font-size: 35px; text-align: left; margin-left: 40px; margin-bottom: -10px">Напитки:</h3>
 
 <div class="cards">
-<div class="card chai">
+<div class="card ">
  <img src="chai.jpg" alt="чай" class="dish-photo">
     <h3>Чай</h3>
     <p style="font-size: 16px;"><i>Черный/зеленый; в пакетиках/росыпью</i></p>
@@ -117,7 +123,7 @@
     <p class="price">Цена за бол.: 40 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card coffe">
+<div class="card ">
   <img src="coffe.jpg" alt="кофе" class="dish-photo">
     <h3>Кофе</h3>
      <p style="font-size: 16px;"><i>Арабика /Робуста/Либерика/Эксцельза; Эспрессо/Американо/Лунго/Ристретто/Раф/Капучино/Латте/Флэт уайт/Кортадо/Моккачино</i></p>
@@ -125,42 +131,42 @@
     <p class="price">Цена за бол.: 50 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card voda">
+<div class="card ">
   <img src="voda.jpg" alt="вода" class="dish-photo">
     <h3>Вода</h3>
      <p style="font-size: 16px;"><i>Газированная/негазированная</i></p>
     <p class="price">Цена за сред.: 30 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card sok-yab">
+<div class="card ">
   <img src="sok-yab.jpg" alt="яблочный сок" class="dish-photo">
   <h3>Сок яблочный</h3> 
    <p style="font-size: 16px;"><i>Состав: тесто; мясо(баранины/говядины/свинины).</i></p>
     <p class="price">Цена за сред: 50₽</p>
     <button>Заказать</button>
   </div>
-<div class="card apelsin">
+<div class="card ">
   <img src="apelsin.jpg" alt="апельсиновый сок" class="dish-photo">
     <h3>Сок апельсиновый</h3>
     <p style="font-size: 16px;"><i>Состав: тесто; сулугуни; имеретинский сыр; брынзу; адыгейский сыр; моцарелла; яйцо; сливочное масло; сметана/йогурт.</i></p>
     <p class="price">Цена за сред: 45 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card multi">
+<div class="card ">
   <img src="multi.jpg" alt="мультфрукт" class="dish-photo">
     <h3>Сок мультифрукт</h3>
     <p style="font-size: 16px;"><i>Состав: мясо(говядины/баранины/курицы); баклажаны; помидоры; сладкий перец; репчатый лук; чеснок; картофель; морковь.</i></p>
     <p class="price">Цена за сред: 45 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card kvas">
+<div class="card ">
   <img src="kvas.jpg" alt="Квас" class="dish-photo">
     <h3>Квас</h3>
      <p style="font-size: 16px;"><i>Квас</i></p>
     <p class="price">Цена за сред: 50 ₽</p>
     <button>Заказать</button>
   </div>
-<div class="card limonad">
+<div class="card ">
   <img src="limonad.jpg" alt="Лимонад" class="dish-photo">
     <h3>Лимонад</h3>
      <p style="font-size: 16px;"><i>Грушевый/ ялочный/ лимонный</i></p>
